@@ -1,0 +1,46 @@
+plugins {
+    id 'java-library'
+}
+
+repositories {
+    mavenCentral()
+}
+
+configurations {
+    jmhImplementation
+    jmhAnnotationProcessor
+}
+
+dependencies {
+    // JMH
+    jmhImplementation 'org.openjdk.jmh:jmh-core:latest.release'
+    jmhAnnotationProcessor 'org.openjdk.jmh:jmh-generator-annprocess:latest.release'
+
+    // Test
+    testImplementation libs.junit.jupiter
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
+
+sourceSets {
+    jmh {
+        java.srcDirs = ['src/jmh/java']
+        resources.srcDirs = ['src/jmh/resources']
+        compileClasspath += sourceSets.main.runtimeClasspath
+    }
+}
+
+tasks.register('jmh', JavaExec) {
+    dependsOn jmhClasses
+    main = 'org.openjdk.jmh.Main'
+    classpath = sourceSets.jmh.compileClasspath + sourceSets.jmh.runtimeClasspath
+}
