@@ -1,7 +1,7 @@
-package algorithms;
+package algorithms.trees;
 
+import javax.swing.*;
 import java.util.function.Consumer;
-import javax.swing.JFrame;
 
 class Demo {
     private static final String ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";

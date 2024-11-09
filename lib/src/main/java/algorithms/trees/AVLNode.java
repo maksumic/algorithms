@@ -1,4 +1,4 @@
-package algorithms;
+package algorithms.trees;
 
 public class AVLNode<K extends Comparable<K>, V> extends BinaryNode<K, V> {
     protected int height;

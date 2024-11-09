@@ -1,7 +1,6 @@
-package algorithms;
+package algorithms.trees;
 
-import java.awt.Color;
-import java.awt.Graphics;
+import java.awt.*;
 import java.util.Objects;
 
 public class BinaryNode<K extends Comparable<K>, V> implements Comparable<BinaryNode<K, V>> {

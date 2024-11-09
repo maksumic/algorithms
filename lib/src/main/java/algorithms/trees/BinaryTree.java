@@ -1,8 +1,8 @@
-package algorithms;
+package algorithms.trees;
 
-import java.awt.Graphics;
+import javax.swing.*;
+import java.awt.*;
 import java.util.Objects;
-import javax.swing.JPanel;
 
 public class BinaryTree<K extends Comparable<K>, V> extends JPanel {
     protected static final int VERTICAL_GAP = 32;

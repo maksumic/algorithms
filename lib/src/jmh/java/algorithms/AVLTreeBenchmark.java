@@ -1,14 +1,11 @@
 package algorithms;
 
-import java.util.Random;
-import org.openjdk.jmh.annotations.Benchmark;
-import org.openjdk.jmh.annotations.Measurement;
-import org.openjdk.jmh.annotations.Param;
-import org.openjdk.jmh.annotations.Scope;
-import org.openjdk.jmh.annotations.Setup;
-import org.openjdk.jmh.annotations.State;
-import org.openjdk.jmh.annotations.Warmup;
+import algorithms.trees.AVLNode;
+import algorithms.trees.AVLTree;
+import org.openjdk.jmh.annotations.*;
 import org.openjdk.jmh.infra.Blackhole;
+
+import java.util.Random;
 
 @State(Scope.Thread)
 @Warmup(iterations = 9, time = 1)

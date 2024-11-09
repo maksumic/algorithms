@@ -1,4 +1,4 @@
-package algorithms;
+package algorithms.trees;
 
 public class AVLTree<K extends Comparable<K>, V> extends BinaryTree<K, V> {
 

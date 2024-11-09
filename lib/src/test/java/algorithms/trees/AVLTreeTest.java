@@ -1,8 +1,9 @@
-package algorithms;
+package algorithms.trees;
 
 import org.junit.jupiter.api.Test;
-import static algorithms.AVLTree.computeHeight;
-import static algorithms.AVLTree.getBalanceFactor;
+
+import static algorithms.trees.AVLTree.computeHeight;
+import static algorithms.trees.AVLTree.getBalanceFactor;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
 
